@@ -45,6 +45,14 @@ void targetConfiguration(void) {
     for (uint8_t pidProfileIndex = 0; pidProfileIndex < MAX_PROFILE_COUNT; pidProfileIndex++) {
         pidProfile_t *pidProfile = pidProfilesMutable(pidProfileIndex);
 
+        //optimizng for true-x and most standard tunes.
+        pidProfile->pid[PID_PITCH].P = 45;	
+        pidProfile->pid[PID_PITCH].I = 50;	
+        pidProfile->pid[PID_PITCH].D = 30;	
+        pidProfile->pid[PID_ROLL].P = 45;	
+        pidProfile->pid[PID_ROLL].I = 50;	
+        pidProfile->pid[PID_ROLL].D = 30;
+
         /* Setpoints */
         pidProfile->dtermSetpointWeight = 100;
         pidProfile->setpointRelaxRatio = 100; // default to snappy for racers
