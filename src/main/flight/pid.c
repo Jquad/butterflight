@@ -519,7 +519,7 @@ void pidController(const pidProfile_t *pidProfile, const rollAndPitchTrims_t *an
             const float rD = dynCd * MIN(getRcDeflectionAbs(axis) * relaxFactor, 1.0f) * currentPidSetpoint - gyroRateFiltered;    // cr - y
             const float pureRD = dynCd * MIN(getRcDeflectionAbs(axis) * relaxFactor, 1.0f) * getSetpointRate(axis) - gyroRateFiltered;    // cr - y
             
-            float delta;
+            float delta = 0.0f;
             float iDT = 1.0f/deltaT; //divide once
 
             switch (pidProfile->dterm_filter_style) {
