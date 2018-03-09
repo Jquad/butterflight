@@ -149,7 +149,7 @@ int imuf9001Whoami(const gyroDev_t *gyro)
         {
             switch ( (*(imufVersion_t *)&(reply.param1)).firmware )
             {
-                case 101: //version 101 allowed right now
+                case 102: //version 102 required right now
                     return IMUF_9001_SPI;
                 break;
                 default:
