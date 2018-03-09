@@ -187,11 +187,6 @@
 
 #define CAMERA_CONTROL_PIN             PB6    // define dedicated camera_osd_control pin
 
-#define HELIO_PROFILE_PITCH_Q 3500
-#define HELIO_PROFILE_ROLL_Q 3500
-#define HELIO_PROFILE_YAW_Q 2500
-#define HELIO_PROFILE_DYN_GAIN 10
-
 
 #if defined(HELIO_RACE)
 #define HELIO_PROFILE_PITCH_Q 800
@@ -208,4 +203,9 @@
 #define HELIO_PROFILE_ROLL_Q 2000
 #define HELIO_PROFILE_YAW_Q 1000
 #define HELIO_PROFILE_DYN_GAIN 50
+#else
+#define HELIO_PROFILE_PITCH_Q 3500
+#define HELIO_PROFILE_ROLL_Q 3500
+#define HELIO_PROFILE_YAW_Q 2500
+#define HELIO_PROFILE_DYN_GAIN 10
 #endif
